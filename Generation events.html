@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<p id="info"></p>
+
+    <script>
+        (function(){
+            document.addEventListener('keydown',function(event){reactTo(event)})
+            document.addEventListener('keyup', function(event){reactTo(event)})
+            document.addEventListener('mousemove', function(event){reactTo(event)})
+
+            function reactTo(event){
+                const info = document.getElementById('info')
+                if(event.type === 'mousemove'){
+                    info.innerHTML = 'Mouse pointer is at X: ' + event.x + 'Y: ' + event.y
+                }
+                if(event.type === 'keydown'){
+                    info.innerHTML += '<hr>' + event.type
+                    info.innerHTML += ': ' + event.keyCode
+                }
+                if(event.type === 'keyup'){
+                    info.innerHTML += '<br>' + event.type + ': ' + String.fromCharCode(event.keyCode) + '<hr>'
+                }
+            }
+        })()
+    </script> -->
+    <form id="pizza" action="echo.pl" method="post">
+        <fieldset>
+            <legend>Select pizza toppings:</legend>
+            <input type="checkbox" name="Top" value="Cheese">Cheese
+            <input type="checkbox" name="Top" value="Ham">Ham
+            <input type="checkbox" name="Top" value="Peppers">Peppers
+        </fieldset>
+        <input type="submit">
+    </form>
+
+    <script>
+        (function(){
+            const form = document.getElementById('pizza')
+            form.addEventListener('submit', function(event) {reactTo(form, event)})
+            form.Top[0].checked = true
+        })()
+
+        function reactTo(form, event){
+            let i,ok, summary = ''
+            for(i = 0; i < form.Top.length; i++){
+                if(form.Top[i].checked){
+                    summary += form.Top[i].value + ' '
+                }
+            }
+            ok = confirm('Submit these choices?\n' + summary)
+            if(!ok){
+                event.preventDefault()
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function(){
+            let hues = ['Red', 'RED', 'red', 'Green', 'Blue']
+            let nums = [1, 20, 3, 17, 14, 0.5]
+            console.log('Colors: ' + hues)
+            console.log('Sort: ' + hues.sort())
+            console.log('/nNumbers: ' + nums)
+            console.log('Sort: ' + nums.sort)
+            console.log('Numeral sort: ' + nums.sort(sortNums))
+            console.log('Reverse: ' + nums.reverse())
+
+            function sortNums (numOne, numTwo){
+                return numOne - numTwo
+            }
+        })()
+    </script>
+</body>
+</html>

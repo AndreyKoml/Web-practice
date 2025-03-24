@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*(function(){
+            let topic = 'JavaScript'
+            let series = 'in easy steps'
+            let title =''
+
+            console.log(topic + ' > ' + topic.toLowerCase())
+            console.log(topic + ' > ' + topic.toUpperCase())
+
+            title = topic.concat(' ', series)
+            console.log('Title: ' + title)
+
+            console.log('\n' + topic + ' - Length: ' + topic.length)
+            console.log(series + ' - Length: ' + series.length)
+            console.log(title + ' - Length: ' + title.length)
+        })() 
+       (function(){
+        let definition = 'JavaScript is the original dialect of\
+        the ECMAScript standart language.'
+
+        let str = definition.slice(0, 27)
+        str += definition.slice(62, 70)
+        console.log(str)
+
+        console.log(str.split('', 4))
+
+        str = definition.substring(42, 52)
+        str += definition.substring(10, 17)
+        str += definition.substr(52, 70)
+
+        console.log(str)
+       })()
+      (function(){
+
+        let str = 'JavaScript in easy steps'
+
+        console.log("'Script' search: " + str.search('Script'))
+        console.log("'script' search: " + str.search('script'))
+
+        console.log("\n'Script' match: " + str.match('Script'))
+        console.log("\n'script' match: " + str.match('script'))
+
+        console.log('\nindexOf "s": ' + str.indexOf('s'))
+        console.log('indexOf "m": ' + str.indexOf('m'))
+        console.log('\nlastindexOf "s": ' + str.lastIndexOf('s'))
+        console.log('lastindexOf "m": ' + str.lastIndexOf('m'))
+
+        console.log('\ncharAt 0: ' + str.charAt(0))
+        console.log('\ncharCodeAt 0: ' + str.charCodeAt(0))
+        console.log('From charCode: ' + String.fromCharCode(74, 97, 118, 97))
+        
+        console.log('\noriginal: ' + str)
+        console.log('Replaced: ' + str.replace('easy', 'simple'))
+      })()*/
+     (function(){
+        let str = ' Love for all, hatred for none. '
+
+        console.log('String: ' + str)
+        console.log('Start with "L"?' + str.startsWith('L'))
+        console.log('Ends with "."?' + str.endsWith('.'))
+        console.log('First letter: ' + str[0])
+
+        str = str.trim()
+
+        console.log('Trimmed: ' + str)
+        console.log('Start with "L"?' + str.startsWith('L'))
+        console.log('Ends with "."?' + str.endsWith('.'))
+        console.log('First letter: ' + str[0])
+
+        console.log('\nInclueds "Hat"? ' + str.includes('Hat'))
+        console.log('Includes "hat"? ' + str.includes('hat'))
+
+        console.log('\nRepeat: ' + str.repeat(10))
+     })()
+    </script>
+</body>
+</html>

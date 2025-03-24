@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*(function(){
+            let radius = 4
+            console.log('\nRadius of circle: ' + radius)
+
+            let area = Math.PI * (radius * radius)
+            console.log('\nArea of circle: ' + area)
+
+            let lenght = 2 * (Math.PI * radius)
+            console.log('\nLenght of circle: ' + lenght)
+
+            let cube = (radius * radius * radius)
+            let V = ((4/3) * Math.PI) * cube
+            console.log('\nV of circle: ' + V)
+        })()
+       (function(){
+        let square = Math.pow(5,2) //5*5
+        let cube = Math.pow(4,3) //4*4*4
+
+        console.log('\nLargest: ' + Math.max(square, cube))
+        console.log('\nSmallest: ' + Math.min(square, cube))
+
+        square *= -1
+        cube *= -1
+
+        console.log('\nLargest: ' + Math.max(square, cube))
+        console.log('\nSmallest: ' + Math.min(square, cube))
+       })()
+      (function(){
+        let temp = 36.9
+
+        console.log('Ceiling: ' + Math.ceil(temp))
+        console.log('Floor: ' + Math.floor(temp))
+        console.log('Round: ' + Math.round(temp))
+
+        console.log('\nImprecision: ' + (81.66 * 15))
+        console.log('Correct: ' + (((81.66 * 100) * 15)/100))
+
+        console.log('\nFloat: ' + Math.PI)
+        console.log('Commuted: ' + ((Math.round(Math.PI * 100)/ 100)))
+      })()*/
+     (function(){
+        let i, rand, temp, nums = []
+        let str = '\n\nYour six Lucky number: '
+
+        for(i = 1; i < 60; i++)
+     {
+        nums[i] = i
+     }
+
+     for(i = 1;i < 60; i++)
+     {
+        rand = Math.ceil(Math.random() * 59)
+        temp = nums[i]
+        nums[i] = nums[rand]
+        nums[rand] = temp
+     }
+     for(i = 1; i < 7; i++)
+     {
+        str += nums[i]
+        if(i !== 6){
+            str += ' - '
+        }
+     }
+     console.log(str)
+    })()
+    </script>
+</body>
+</html>
